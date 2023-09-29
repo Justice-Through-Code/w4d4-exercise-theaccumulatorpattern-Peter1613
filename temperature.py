@@ -1,10 +1,15 @@
 
 '''
-    You are given a list of temperature readings in Celsius for a week. Your task is to implement a function that calculates and returns the average temperature for the week. To achieve this, you will use the accumulator pattern to accumulate the sum of temperatures and then calculate the average.
+    You are given a list of temperature readings in Celsius for a week. 
+    Your task is to implement a function that calculates and returns the average 
+    temperature for the week. 
+    To achieve this, you will use the accumulator pattern to accumulate the sum of
+    temperatures and then calculate the average.
 
     Input
 
-    A list temperatures containing n floating-point numbers representing the temperature readings for the week.
+    A list temperatures containing n floating-point numbers representing the temperature
+    readings for the week.
     (1 <= n <= 7, -20 <= temperatures[i] <= 40)
     
     Input Example
@@ -20,18 +25,36 @@
 
 from typing import List
 
+
+
 def calculate_average_temperature(temperatures: List[float]) -> float:
-     # 1.1 TODO: # Initialize an accumulator variable to keep track of the sum of temperatures.
+    accum_sum_tem = 0
+    len_temps = len(temperatures) 
+    for cur_tem in temperatures:
+        accum_sum_tem = accum_sum_tem + cur_tem
+            
+    if len_temps == 0:
+        return None 
+    else:
+        return accum_sum_tem/len_temps
+             # change print to return for unittest!
+        
+    
+    
+     # 1.1 TODO: # Initialize an accumulator variable to keep track of the sum of 
+     # temperatures.
    
     
-    # 1.2 TODO:# Iterate through the `temperatures` list, updating the accumulator with the current temperature.
+    # 1.2 TODO:# Iterate through the `temperatures` list, updating the accumulator with
+    # the current temperature.
 
     
-    # 1.3 TODO: # Calculate and return the average temperature using the accumulated sum and the total number of readings.
+    # 1.3 TODO: # Calculate and return the average temperature using the accumulated sum
+    # and the total number of readings.
 
 
     
     # 1.3 TODO: return the average temperature
     
 
-#calculate_average_temperature()
+# calculate_average_temperature(temperatures, List)
